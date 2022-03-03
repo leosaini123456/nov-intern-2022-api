@@ -1,0 +1,44 @@
+install package 
+    npm i dotenv
+    .env 
+    it load enviroment variable automatically from .env file
+
+download mongodb
+    npm i mongodb
+
+
+find the data wrt location
+> db.zomato.find({state_id : 1}).pretty();
+> db.zomato.find({state_id:1, cost:450}).pretty();
+
+find data at particular range
+> db.zomato.find({$and:[{cost:{$gt:300, $lt:500}}]}).pretty();
+
+if we want data in particular order
+db.zomato.find({$and:[{cost:{$gt:300, $lt:500}}]}).sort({cost:1}).pretty();
+db.zomato.find({$and:[{cost:{$gt:300, $lt:500}}]}).sort({cost:-1}).pretty();
+
+
+two way to pass data
+1. params
+   > data pass after "/"
+   > need to define in route
+   > compulsory to pass
+
+2. Query params
+    > data pass after 
+    > no need to define in route
+    > not compulsory
+
+
+packages
+1. body-parser
+2. cors
+
+
+
+1. Your Database should be live
+2. you wust use 
+  > process.env.PORT
+
+3. in package.json you must have start command

@@ -1,0 +1,51 @@
+Page 1
+1. list of city
+    > http://localhost:4321/location
+2. list of restro
+    > http://localhost:4321/restro
+
+3. restro wrt city
+    > http://localhost:4321/restro?state_id=3
+
+4. quicksearch( categories )
+    > http://localhost:4321/mealtype
+
+Page 2
+1. restro wrt quicksearch
+    > http://localhost:4321/restro?meal_id=3&state_id=1
+    > http://localhost:4321/restro?meal_id=3
+    > http://localhost:4321/restro?state_id=1
+
+filter 
+    1. cuisine filter
+        > data wrt to cuisine and quicksearch
+        http://localhost:4321/filter/1?cuisine=2
+
+    2. cost filter 
+     > data wrt cuisine + cost
+     http://localhost:4321/filter/1?lcost=300&hcost=500&cuisine=2
+
+    3. sort 
+        > low to high 
+        http://localhost:4321/filter/1?sort=1
+        > high to low
+        http://localhost:4321/filter/1?sort=-1
+    4. pagination
+    http://localhost:4321/filter/1?skip=0&&limit=5
+
+page 3
+
+    1. restro detail
+        > http://localhost:4321/detail/1
+   
+    2. menu wrt to restro
+        > http://localhost:4321/menu/3
+
+Page 4
+    1. menu items on user selection
+    2. api to place order 
+
+page 5
+    list of all orders
+
+ 
